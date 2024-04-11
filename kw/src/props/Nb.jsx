@@ -1,6 +1,7 @@
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
 import { Fragment } from 'react'
+import { styles } from '../style'
 
 const about = [
     {
@@ -25,7 +26,7 @@ const publications = [
       icon: IconBook,
     },
     {
-      name: 'journals',
+      name: 'Journals',
       description: 'Create your own targeted content',
       href: '##',
       icon: IconWrite,
@@ -65,9 +66,9 @@ export default function Nb () {
                         <Menu.Item>
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black/5">
                             <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                                {publications.map((item) => (
+                                {publications.map((item, index) => (
                                 <a
-                                    key={item.name}
+                                    key={index}
                                     href={item.href}
                                     className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50"
                                 >
@@ -75,10 +76,10 @@ export default function Nb () {
                                     <item.icon aria-hidden="true" />
                                     </div>
                                     <div className="ml-4">
-                                    <p className="text-sm font-medium text-gray-900">
+                                    <p className="text-[18px] font-normal text-gray-900 font-grotesque">
                                         {item.name}
                                     </p>
-                                    <p className="text-sm text-gray-500">
+                                    <p className={`${styles.paragraph} text-[17px] text-gray-400`}>
                                         {item.description}
                                     </p>
                                     </div>
@@ -116,9 +117,9 @@ export default function Nb () {
                         <Menu.Item>
                         <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black/5">
                             <div className="relative grid gap-8 bg-white p-7 lg:grid-cols-2">
-                                {about.map((item) => (
+                                {about.map((item, index) => (
                                 <a
-                                    key={item.name}
+                                    key={index}
                                     href={item.href}
                                     className="-m-3 flex items-center rounded-lg p-2 transition duration-150 ease-in-out hover:bg-gray-50 "
                                 >
@@ -126,10 +127,10 @@ export default function Nb () {
                                     <item.icon aria-hidden="true" />
                                     </div>
                                     <div className="ml-4">
-                                    <p className="text-sm font-medium text-gray-900">
+                                    <p className="text-[18px] font-normal text-gray-900 font-grotesque">
                                         {item.name}
                                     </p>
-                                    <p className="text-sm text-gray-500">
+                                    <p className={`${styles.paragraph} text-[17px] text-gray-400`}>
                                         {item.description}
                                     </p>
                                     </div>

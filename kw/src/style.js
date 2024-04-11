@@ -1,5 +1,5 @@
 export const styles = {
-    paragraph: "font-poppins font-light text-gray-300 text-[14px] leading-[30.8px]",
-    heading : " font-poppins font-medium text-[40px]"
+    paragraph: "font-grotesque font-light text-gray-500 text-[18px] leading-[30.8px]",
+    heading : " font-grotesque font-medium text-[42px] md:text-[50px]"
 }
 
