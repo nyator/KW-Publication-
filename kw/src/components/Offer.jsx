@@ -1,5 +1,5 @@
 import React from 'react'
-import { search, rectangle } from '../assets'
+import { search, rectangle, dot3, ellipse, rec } from '../assets'
 import { styles } from '../style'
 
 
@@ -32,11 +32,13 @@ const Offer = () => {
   return (
     <div className='my-[100px] flex flex-col md:flex-row items-center justify-evenly gap-0 ss:gap-5 relative'>
 
-        <div className='mb-10 md:mb-0'>
+        <div className='mb-10 md:mb-0 relative'>
             <div className='w-[410px] text-center md:text-start'>
             <h1 className={`${styles.heading1}`}>Missions of the <br className='sm:hidden' /> kingdomWord.</h1>
             <p className={`${styles.paragraph1}`}>We build ready made websites,<br className='md:hidden' /> mobile applications, and elaborate <br className='md:hidden' /> online business services.</p>
             </div>
+            <img src={dot3} alt="#"  className='absolute hidden md:flex left-10 -bottom-[270px]  -z-20 '/>
+            <img src={rec} alt="#"  className='absolute hidden md:flex -top-10 -left-10  -z-10 '/>
         </div>'
 
 
@@ -75,7 +77,9 @@ const Offer = () => {
         </div>
 
                     
-        <img src={rectangle} alt="#" className='absolute hidden md:flex right-0 -z-10 ' />
+        <img src={ellipse} alt="#" className='absolute hidden md:flex -bottom-10 right-10 -z-20 object-contain' />
+        
+        <img src={rectangle} alt="#" className='absolute hidden md:flex right-0 -z-20  object-contain' />
 
 
     </div>
