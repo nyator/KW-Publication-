@@ -30,7 +30,7 @@ const offers = [
 
 const Offer = () => {
   return (
-    <div className='my-[100px] flex flex-col md:flex-row items-center justify-evenly gap-0 ss:gap-5'>
+    <div className='my-[100px] flex flex-col md:flex-row items-center justify-evenly gap-0 ss:gap-5 relative'>
 
         <div className='mb-10 md:mb-0'>
             <div className='w-[410px] text-center md:text-start'>
@@ -74,7 +74,8 @@ const Offer = () => {
 
         </div>
 
-
+                    
+        <img src={rectangle} alt="#" className='absolute hidden md:flex right-0 -z-10 ' />
 
 
     </div>
