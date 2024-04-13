@@ -6,6 +6,7 @@ import dots from './dots.svg'
 import dots2 from './dots2.svg'
 import heroimg from  './heroimg.png'
 import search from './search.png'
+import rectangle from './rectangle.png'
 // import asset1 from  './asset1.svg'
 
 export {
@@ -17,5 +18,6 @@ export {
     dots2,
     heroimg,
     search,
+    rectangle,
     // asset1,
 }
