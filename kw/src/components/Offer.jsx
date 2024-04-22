@@ -48,7 +48,7 @@ const Offer = () => {
             
             <div className='flex flex-col gap-7'>
                 {offers.map((item, index) => index < 2 && (
-                <div>
+                <div key={index}>
                     <div className='flex flex-col w-[208px] h-[279px] bg-white rounded-3xl border-[1px] border-[#F2F2F2] p-4 items-center text-center justify-evenly'>
                     <div className='bg-[#F1F7FF] p-5 rounded-3xl'>
                         <img src={search} alt="#" className='object-contain w-[50px] h-[50px]'/>
@@ -62,7 +62,7 @@ const Offer = () => {
             
             <div className='flex flex-col gap-7 mt-0 ss:-mt-20'>
                 {offers.map((item, index) => index > 1 && (
-                <div>
+                <div key={index}>
                     <div className='flex flex-col w-[208px] h-[279px] bg-white rounded-3xl border-[1px] border-[#F2F2F2] p-4 items-center text-center justify-evenly'>
                     <div className='bg-[#F1F7FF] p-5 rounded-3xl'>
                         <img src={search} alt="#" className='object-contain w-[50px] h-[50px]'/>
