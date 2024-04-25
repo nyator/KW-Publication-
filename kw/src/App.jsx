@@ -11,7 +11,7 @@ const App = () => {
     <div className="w-full py-6 px-5 md:px-20 font-poppins overflow-hidden">
       <Navbar />
       <Hero />
-      <Offer/>
+      <Offer />
       {/* <Pic /> */}
       <Newsletter />
       <Footer />

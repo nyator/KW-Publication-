@@ -32,14 +32,14 @@ const Offer = () => {
   return (
     <div className='my-[100px] flex flex-col md:flex-row items-center justify-evenly gap-0 ss:gap-5 relative'>
 
-        <div className='mb-10 md:mb-0 relative'>
+        <div className='mb-5 ss:mb-7 md:mb-0 relative'>
             <div className='w-[410px] text-center md:text-start'>
             <h1 className={`${styles.heading1}`}>Missions of the <br className='sm:hidden' /> kingdomWord.</h1>
             <p className={`${styles.paragraph1}`}>We build ready made websites,<br className='md:hidden' /> mobile applications, and elaborate <br className='md:hidden' /> online business services.</p>
             </div>
             <img src={dot3} alt="#"  className='absolute hidden md:flex left-10 -bottom-[270px]  -z-20 '/>
             <img src={rec} alt="#"  className='absolute hidden md:flex -top-10 -left-10  -z-10 '/>
-        </div>'
+        </div>
 
 
 
@@ -60,7 +60,7 @@ const Offer = () => {
                 ))}
             </div>
             
-            <div className='flex flex-col gap-7 mt-0 ss:-mt-20'>
+            <div className='flex flex-col gap-7 mt-0 ss:-mt-10'>
                 {offers.map((item, index) => index > 1 && (
                 <div key={index}>
                     <div className='flex flex-col w-[208px] h-[279px] bg-white rounded-3xl border-[1px] border-[#F2F2F2] p-4 items-center text-center justify-evenly'>

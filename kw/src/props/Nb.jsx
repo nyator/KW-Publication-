@@ -1,6 +1,6 @@
 import { Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { styles } from '../style'
 
 const about = [
@@ -41,18 +41,22 @@ const publications = [
 
 
 export default function Nb () {
+const [clicked1, setClicked1] = useState(false)
+const [clicked2, setClicked2] = useState(false)
+
+
+
   return (
     <div className="top-16 w-full max-w-sm px-4">
         <ul className='flex justify-center gap-10 lg:gap-20 text-[18px] relative'>
             
             <li>
                 <Menu as='div' className=" inline-block text-left">
-                    <div className='inline-flex items-center'>
-                        <Menu.Button className='inline-flex items-center hover:scale-105 transition duration-150 ease-in-out'>
+                        <Menu.Button className='inline-flex items-center hover:scale-105 hover:bg-[#f4f9ff93] p-3 rounded-xl transition duration-150 ease-in-out'>
                             Publications
-                        <ChevronDownIcon className="ml-2 h-5 w-5 transition duration-150 ease-in-out" aria-hidden="true"/>
+                        <ChevronDownIcon className={` ${clicked1 ? 'rotate-180' :'rotate-0'} ml-2 h-5 w-5 transition duration-150 ease-in-out`} onClick={()=>setClicked1((prev) => !prev)} aria-hidden="true"/>
                         </Menu.Button>
-                    </div>
+
                     <Transition
                         as={Fragment}
                         enter="transition ease-out duration-100"
@@ -99,9 +103,9 @@ export default function Nb () {
             <li>
                 <Menu as='div' className="inline-block text-left">
                     <div className='inline-flex items-center'>
-                        <Menu.Button className='inline-flex items-center hover:scale-105 transition duration-150 ease-in-out'>
+                        <Menu.Button className='inline-flex items-center hover:scale-105 hover:bg-[#f4f9ff93] p-3 rounded-xl transition duration-150 ease-in-out'>
                             About
-                        <ChevronDownIcon className="ml-2 h-5 w-5 transition duration-150 ease-in-out" aria-hidden="true"/>
+                        <ChevronDownIcon className={` ${clicked2 ? 'rotate-180' :'rotate-0'} ml-2 h-5 w-5 transition duration-150 ease-in-out`} onClick={()=>setClicked2((prev) => !prev)} aria-hidden="true"/>
                         </Menu.Button>
                     </div>
                     <Transition
